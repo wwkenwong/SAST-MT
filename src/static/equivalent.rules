@@ -1,0 +1,68 @@
+\|\|.*\) ==> || 0
+\|\|.*\s ==> || 0
+\(.*\|\| ==> 0 ||
+\s.*\|\| ==> 0 ||
+&&.*\) ==> && 1
+&&.*\s ==> && 1
+\(.*&& ==> 1 &&
+\s.*&& ==> 1 &&
+// ==> SKIP_MUTATING_REST
+true ==> 1
+false ==> 0
+&& ==> && true &&
+\|\| ==> || false ||
+&& ==> && 1 &&
+\|\| ==> || 0 ||
+^(?!u)int8_t ==> signed char
+^(?!un)signed char ==> int8_t
+uint8_t ==> unsigned char
+unsigned char ==> uint8_t
+^(?!u)int16_t ==> short
+^(?!unsigned\s)short ==> int16_t
+uint16_t ==> unsigned short
+unsigned short ==> uint16_t
+^(?!u)int32_t ==> int 
+^(?!unsigned\s)int  ==> int32_t
+uint32_t ==> unsigned int
+unsigned int ==> uint32_t
+^(?!u)int64_t ==> long long
+^(?!unsigned\s)long long ==> int64_t
+uint64_t ==> unsigned long long
+unsigned long long ==> uint64_t
+^(?!u)int_least8_t ==> signed char
+^(?!un)signed char ==> int_least8_t
+uint_least8_t ==> unsigned char
+unsigned char ==> uint_least8_t
+^(?!u)int_least16_t ==> short
+^(?!unsigned\s)short ==> int_least16_t
+uint_least16_t ==> unsigned short
+unsigned short ==> uint_least16_t
+^(?!u)int_least32_t ==> int
+^(?!unsigned\s)int ==> int_least32_t
+uint_least32_t ==> unsigned int
+unsigned int ==> uint_least32_t
+^(?!u)int_least64_t ==> long long
+^(?!unsigned\s)long long ==> int_least64_t
+uint_least64_t ==> unsigned long long
+unsigned long long ==> uint_least64_t
+^(?!u)int_fast8_t ==> signed char
+^(?!unsigned\s)signed char ==> int_fast8_t
+uint_fast8_t ==> unsigned char
+unsigned char ==> uint_fast8_t
+^(?!u)int_fast16_t ==> int
+^(?!unsigned\s)int ==> int_fast16_t
+uint_fast16_t ==> unsigned int
+unsigned int ==> uint_fast16_t
+^(?!u)int_fast32_t ==> int
+^(?!unsigned\s)int ==> int_fast32_t
+uint_fast32_t ==> unsigned int
+unsigned int ==> uint_fast32_t
+^(?!u)int_fast64_t ==> long long
+^(?!unsigned\s)long long ==> int_fast64_t
+uint_fast64_t ==> unsigned long long
+unsigned long long ==> uint_fast64_t
+^(?!u)intmax_t ==> long long
+^(?!unsigned\s)long long ==> intmax_t
+uintmax_t ==> unsigned long long
+unsigned long long ==> uintmax_t
+malloc\( ==> calloc(1,
